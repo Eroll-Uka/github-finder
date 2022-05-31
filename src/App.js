@@ -18,8 +18,8 @@ function App() {
         <Route path='/notfound' element = {<NotFound />} />
         <Route path='/*' element = {<NotFound />} />
         </Routes>
-        <Footer />
         </main>
+        <Footer />
       </div>
     </Router>
   );
