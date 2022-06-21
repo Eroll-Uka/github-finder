@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-.custom-card-image .cardimage-full:before {
+.custom-card-image .card.image-full:before {
     border-radius: 0.5rem;
     opacity:0.45;
 }
