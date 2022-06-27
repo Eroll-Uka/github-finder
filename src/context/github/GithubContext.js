@@ -17,8 +17,7 @@ export const GithubProvider = ({children}) => {
     
 
     //get single user 
-    const getUser = async (login) => {
-        setLoading()
+     const getUser = async (login) => {
         
         const response = await fetch(`${GITHUB_URL}/users/${login}`, {
             headers : {
@@ -38,19 +37,13 @@ export const GithubProvider = ({children}) => {
         }    
     }
 
-    //clear users from state
-
-    const clearUsers = () => dispatch ({ type: 'CLEAR_USERS'})
 
     //Set Loading
-    const setLoading = () => dispatch({type: 'SET_LOADING'})
 
     return <GithubContext.Provider 
     value={{
        ...state,
        dispatch,
-        clearUsers,
-        getUser,
     }}>
         {children}
     </GithubContext.Provider>
